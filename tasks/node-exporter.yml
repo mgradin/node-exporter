@@ -2,7 +2,7 @@
 - name: node-exporter binary
   unarchive:
     src: "{{ VAR_NODE_EXPORTER_URL }}"
-    dest: /usr/local/sbin/node_exporter
+    dest: /usr/local/sbin
     owner: root
     group: root
     mode: 0755
