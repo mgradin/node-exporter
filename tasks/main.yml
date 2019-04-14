@@ -1,5 +1,8 @@
 ---
 # tasks file for node-exporter
+- import_tasks: prerequisites.yml
+  become: true
+
 - import_tasks: firewalld.yml
   become: true
 
