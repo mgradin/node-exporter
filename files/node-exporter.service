@@ -5,8 +5,8 @@ Documentation=https://prometheus.io https://github.com/prometheus/node_exporter
 [Service]
 Restart=always
 ExecStart=/usr/local/sbin/node_exporter \
- -collector.filesystem.ignored-mount-points "^/(sys|proc|dev)($|/)|^/var/lib/docker/.+" \
- -collectors.enabled "conntrack,diskstats,entropy,edac,filefd,filesystem,hwmon,loadavg,meminfo,netdev,netstat,sockstat,stat,systemd,time,uname,vmstat"
+ --collector.filesystem.ignored-mount-points "^/(sys|proc|dev)($|/)|^/var/lib/docker/.+" \
+ --collectors.enabled "conntrack,diskstats,entropy,edac,filefd,filesystem,hwmon,loadavg,meminfo,netdev,netstat,sockstat,stat,systemd,time,uname,vmstat"
 
 [Install]
 WantedBy=multi-user.target
