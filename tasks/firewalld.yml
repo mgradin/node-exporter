@@ -1,0 +1,6 @@
+---
+- firewalld:
+    port: 9100/tcp
+    permanent: yes
+    immediate: yes
+    state: enabled
