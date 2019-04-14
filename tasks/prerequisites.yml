@@ -1,0 +1,5 @@
+---
+- name: Install prerequisites
+  dnf:
+    name: python3-firewall
+    state: installed
