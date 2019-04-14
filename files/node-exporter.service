@@ -4,8 +4,7 @@ Documentation=https://prometheus.io https://github.com/prometheus/node_exporter
 
 [Service]
 Restart=always
-ExecStart=/usr/local/sbin/node_exporter \
- --collector.filesystem.ignored-mount-points "^/(sys|proc|dev)($|/)|^/var/lib/docker/.+" 
+ExecStart=/usr/local/sbin/node_exporter 
 
 [Install]
 WantedBy=multi-user.target
