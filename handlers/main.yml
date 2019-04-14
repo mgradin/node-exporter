@@ -7,3 +7,4 @@
   systemd:
     name: node-exporter.service
     state: restarted
+
