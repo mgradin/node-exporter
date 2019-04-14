@@ -1,6 +1,5 @@
 ---
 # handlers file for node-exporter
----
 - name: reload systemd
   command: systemctl daemon-reload
 
