@@ -1,6 +1,5 @@
 ---
 # tasks file for node-exporter
----
 - name: node-exporter binary
   get_url:
     url: "{{ VAR_NODE_EXPORTER_URL }}"
