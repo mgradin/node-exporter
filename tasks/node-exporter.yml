@@ -1,11 +1,12 @@
 ---
 - name: node-exporter binary
-  get_url:
-    url: "{{ VAR_NODE_EXPORTER_URL }}"
+  unarchive:
+    src: "{{ VAR_NODE_EXPORTER_URL }}"
     dest: /usr/local/sbin/node_exporter
     owner: root
     group: root
     mode: 0755
+    remote_src: yes
   notify: restart node-exporter
 
 - name: node-exporter.service definition
