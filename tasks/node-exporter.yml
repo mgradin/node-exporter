@@ -1,0 +1,26 @@
+---
+- name: node-exporter binary
+  get_url:
+    url: "{{ VAR_NODE_EXPORTER_URL }}"
+    dest: /usr/local/sbin/node_exporter
+    owner: root
+    group: root
+    mode: 0755
+  notify: restart node-exporter
+
+- name: node-exporter.service definition
+  copy:
+    src: node-exporter.service
+    dest: /etc/systemd/system/node-exporter.service
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - reload systemd
+    - restart node-exporter
+
+- name: node-exporter.service state
+  systemd:
+    name: node-exporter.service
+    state: started
+    enabled: true
